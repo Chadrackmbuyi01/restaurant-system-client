@@ -10,10 +10,15 @@
 
 package za.ac.cput.domain;
 
+import com.sun.istack.NotNull;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 
-public class Customer implements Serializable {
-
+@Entity
+public class Customer {
+    @Id
      private String custId;
      private String custFirstName;
      private String custLastName;

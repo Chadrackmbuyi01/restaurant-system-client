@@ -7,13 +7,16 @@ Date 05 April 2022
  */
 package za.ac.cput.domain;
 
+import com.sun.istack.NotNull;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 
-
-public class Driver implements Serializable {
-
-
+@Entity
+public class Driver{
+    @Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
      private String driverId ;
      private String deliveryId ;
      private String orderId ;

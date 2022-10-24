@@ -7,11 +7,15 @@
 
 package za.ac.cput.domain;
 
+import com.sun.istack.NotNull;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 
-
-public class Payment implements Serializable {
-
+@Entity
+public class Payment {
+    @Id
      private String paymentId;
      private String payCash;
      private String payCard;

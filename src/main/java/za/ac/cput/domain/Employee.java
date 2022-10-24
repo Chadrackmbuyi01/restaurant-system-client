@@ -5,13 +5,16 @@
  */
 package za.ac.cput.domain;
 
+import com.sun.istack.NotNull;
 
-import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-public class Employee implements Serializable {
-
-     private int empId;
-     private String empFname, empLname, empAddress;
+@Entity
+public class Employee {
+    @Id
+    private int empId;
+    private String empFname, empLname, empAddress;
 
      public Employee (Builder builder){
          this.empFname=builder.empFname;

@@ -4,11 +4,15 @@
  */
 package za.ac.cput.domain;
 
+import com.sun.istack.NotNull;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 
-
-public class Role implements Serializable {
-
+@Entity
+public class Role {
+    @Id
      private int roleId;
      private String roleName;
 

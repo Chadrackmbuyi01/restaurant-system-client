@@ -7,12 +7,16 @@ package za.ac.cput.domain;
  */
 
 
+import com.sun.istack.NotNull;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 //import org.jetbrains.annotations.Contract;
-
-public class Owner implements Serializable {
-
+@Entity
+public class Owner {
+    @Id
      private int ownerId;
      private String ownerName;
 
