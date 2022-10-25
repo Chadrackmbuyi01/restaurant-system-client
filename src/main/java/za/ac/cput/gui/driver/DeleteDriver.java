@@ -81,10 +81,18 @@ public class DeleteDriver implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        String message = "The Driver has been deleted from the system";
         if(e.getActionCommand().equals("Delete")){
+
+         try{
             DriverHttp driverHttp = new DriverHttp();
             String driverId = txtDriverId.getText();
             //driverHttp.delete(driverId);
+        }  catch(Exception ex){
+             JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+         }
+            JOptionPane.showMessageDialog(null, message, "Success", JOptionPane.INFORMATION_MESSAGE);
+
         }
 
         if(e.getActionCommand().equals("Clear")){
