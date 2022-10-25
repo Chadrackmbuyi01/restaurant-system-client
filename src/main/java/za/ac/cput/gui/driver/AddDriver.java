@@ -105,9 +105,9 @@ public class AddDriver implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        if(e.getActionCommand().equals("Save")){
-
+        String message = "This driver has been saved to the system";
+        if (e.getActionCommand().equals("Save")) {
+         try{
             String driverId = txtDriverId.getText();
             String deliveryId = txtDeliveryId.getText();
             String orderId = txtOrderId.getText();
@@ -115,10 +115,15 @@ public class AddDriver implements ActionListener {
 
             DriverHttp driverHttp = new DriverHttp();
 
-            driverHttp.save(deliveryId,orderId,driverName);
-
+            driverHttp.save(deliveryId, orderId, driverName);
+        }
+             catch(Exception ex){
+                JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            JOptionPane.showMessageDialog(null, message, "Success", JOptionPane.INFORMATION_MESSAGE);
 
         }
+
 
         if(e.getActionCommand().equals("Clear")){
 

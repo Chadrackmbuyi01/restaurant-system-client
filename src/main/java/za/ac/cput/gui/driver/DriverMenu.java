@@ -100,19 +100,49 @@ public class DriverMenu implements ActionListener {
 
         if(e.getActionCommand().equals("Add New Driver")){
             AddDriver addDriver = new AddDriver();
-            addDriver.setGUI();
+            JFrame f;
+            f = new JFrame();
+            String user = JOptionPane.showInputDialog(f,"Enter password:");
+            if(user.equals("1234")){
+                addDriver.setGUI();
+            }
+         else{
+                JOptionPane.showMessageDialog(null,"You do not have access to this option", "Warning", JOptionPane.OK_OPTION);
+            }
+
             MenuFrame.dispose();
         }
+
+
         if(e.getActionCommand().equals("Check A Driver")){
             CheckDriver checkDriver = new CheckDriver();
-            checkDriver.setGUI();
+            JFrame f;
+            f = new JFrame();
+            String user = JOptionPane.showInputDialog(f,"Enter password:");
+            if(user.equals("1234")){
+                checkDriver.setGUI();
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"You do not have access to this option", "Warning", JOptionPane.OK_OPTION);
+            }
             MenuFrame.dispose();
         }
+
+
         if(e.getActionCommand().equals("Delete Driver")){
             DeleteDriver deleteDriver = new DeleteDriver();
-            deleteDriver.setGUI();
+            JFrame f;
+            f = new JFrame();
+            String user = JOptionPane.showInputDialog(f,"Enter password:");
+            if(user.equals("1234")){
+                deleteDriver.setGUI();
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"You do not have access to this option", "Warning", JOptionPane.OK_OPTION);
+            }
             MenuFrame.dispose();
         }
+
         if(e.getActionCommand().equals("Display All Drivers")){
             DisplayDrivers displayDrivers = new DisplayDrivers();
             displayDrivers.setGUI();
