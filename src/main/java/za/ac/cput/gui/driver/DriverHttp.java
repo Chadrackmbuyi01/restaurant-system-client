@@ -16,7 +16,7 @@ public class DriverHttp {
     private RestTemplate restTemplate = new RestTemplate();
 
     private HttpHeaders httpHeaders = new HttpHeaders();
-    private final String driverURL = "http://localhost:8080/restaurant/driver";
+    private final String driverURL = "http://localhost:8083/restaurant/driver";
 
     private String username = "manager";
     private String password = "1234";

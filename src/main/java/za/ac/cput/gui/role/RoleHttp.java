@@ -16,7 +16,7 @@ public class RoleHttp {
     private RestTemplate restTemplate = new RestTemplate();
 
     private HttpHeaders httpHeaders = new HttpHeaders();
-    private final String roleURL = "http://localhost:8080/restaurant/role";
+    private final String roleURL = "http://localhost:8083/restaurant/role";
 
     private String username = "manager";
     private String password = "1234";

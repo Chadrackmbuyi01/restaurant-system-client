@@ -14,7 +14,7 @@ public class EmployeeHttp {
     private RestTemplate restTemplate = new RestTemplate();
 
     private HttpHeaders httpHeaders = new HttpHeaders();
-    private final String employeeURL = "http://localhost:8080/restaurant/employee";
+    private final String employeeURL = "http://localhost:8083/restaurant/employee";
 
     private String username = "manager";
     private String password = "1234";
@@ -46,11 +46,9 @@ public class EmployeeHttp {
         String url = employeeURL + "/all";
         System.out.println(url);
         HttpHeaders header = new HttpHeaders();
-        header.setBasicAuth("employee","4321");
+        header.setBasicAuth(username2, password2);
         HttpEntity<String> httpEntity = new HttpEntity<>(null, header);
-        ResponseEntity<String> responseGetAll =
-                this.restTemplate
-                        .exchange(url, HttpMethod.GET, httpEntity, String.class);
+        ResponseEntity<String> responseGetAll = this.restTemplate.exchange(url, HttpMethod.GET, httpEntity, String.class);
         return responseGetAll.getBody();
     }
 

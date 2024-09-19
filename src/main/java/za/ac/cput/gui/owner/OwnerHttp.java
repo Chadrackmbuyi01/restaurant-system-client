@@ -16,7 +16,7 @@ public class OwnerHttp {
     private RestTemplate restTemplate = new RestTemplate();
 
     private HttpHeaders httpHeaders = new HttpHeaders();
-    private final String ownerURL = "http://localhost:8080/restaurant/owner";
+    private final String ownerURL = "http://localhost:8083/restaurant/owner";
 
     private String username = "manager";
     private String password = "1234";

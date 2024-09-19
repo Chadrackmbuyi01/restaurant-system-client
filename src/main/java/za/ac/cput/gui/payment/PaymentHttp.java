@@ -16,7 +16,7 @@ public class PaymentHttp {
     private RestTemplate restTemplate = new RestTemplate();
 
     private HttpHeaders httpHeaders = new HttpHeaders();
-    private final String paymentURL = "http://localhost:8080/restaurant/payment";
+    private final String paymentURL = "http://localhost:8083/restaurant/payment";
 
     private String username = "manager";
     private String password = "1234";

@@ -16,7 +16,7 @@ public class CustomerHttp {
     private RestTemplate restTemplate = new RestTemplate();
 
     private HttpHeaders httpHeaders = new HttpHeaders();
-    private final String customerURL = "http://localhost:8080/restaurant/customer";
+    private final String customerURL = "http://localhost:8083/restaurant/customer";
 
     private String username = "manager";
     private String password = "1234";
