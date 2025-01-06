@@ -15,20 +15,23 @@ public class AddEmployee extends Component implements ActionListener {
     private JButton btnSave, btnExit, btnClear;
     private Font headingFont, ft3txt;
     Color panAllColor = Color.CYAN;
-    Color btnColor = Color.LIGHT_GRAY;
+    Color btnColor = Color.red;
 
     public AddEmployee(){
 
         headingFont = new Font("Arial", Font.BOLD, 20);
         ft3txt = new Font("Arial", Font.PLAIN, 24);
 
-        AddEmployeeFrame = new JFrame("Employee: ");
+        AddEmployeeFrame = new JFrame("Employee Dashboard ");
         panelNorth = new JPanel();
         panelSouth = new JPanel();
         panelCenter = new JPanel();
         panelNorth.setBackground(panAllColor);
         panelSouth.setBackground(panAllColor);
         panelCenter.setBackground(panAllColor);
+
+        panelSouth.setBackground(btnColor);
+        panelNorth.setBackground(btnColor);
 
         lblHeading = new JLabel("New Employee Registry",JLabel.CENTER);
 

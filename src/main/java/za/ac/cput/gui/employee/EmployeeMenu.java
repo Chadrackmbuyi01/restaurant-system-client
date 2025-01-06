@@ -97,22 +97,50 @@ public class EmployeeMenu implements ActionListener {
 
         if(e.getActionCommand().equals("Add New Employee")){
             AddEmployee addEmployee = new AddEmployee();
-            addEmployee.setGUI();
+            JFrame jFrame;
+            jFrame = new JFrame();
+            String user = JOptionPane.showInputDialog(jFrame, "Enter Password: ");
+            if(user.equals("1234")){
+                addEmployee.setGUI();
+            } else {
+                JOptionPane.showInputDialog(null,"You do not have access to this option", "Warning", JOptionPane.OK_OPTION);
+            }
             MenuFrame.dispose();
         }
         if(e.getActionCommand().equals("Check An Employee")){
             CheckEmployee checkEmployee = new CheckEmployee();
-            checkEmployee.setGUI();
+            JFrame jFrame;
+            jFrame = new JFrame();
+            String user = JOptionPane.showInputDialog(jFrame, "Enter Password: ");
+            if (user.equals("1234")){
+                checkEmployee.setGUI();
+            } else {
+                JOptionPane.showInputDialog(null,"You do not have access to this option", "Warning", JOptionPane.OK_OPTION);
+            }
             MenuFrame.dispose();
         }
         if(e.getActionCommand().equals("Delete Employee")){
             DeleteEmployee deleteEmployee = new DeleteEmployee();
-            deleteEmployee.setGUI();
+            JFrame jFrame;
+            jFrame = new JFrame();
+            String user = JOptionPane.showInputDialog(jFrame, "Enter Password: ");
+            if (user.equals("1234")){
+                deleteEmployee.setGUI();
+            } else {
+                JOptionPane.showInputDialog(null,"You do not have access to this option", "Warning", JOptionPane.OK_OPTION);
+            }
             MenuFrame.dispose();
         }
         if(e.getActionCommand().equals("Display All Employees")){
             DisplayEmployees displayEmployees = new DisplayEmployees();
-            displayEmployees.setGUI();
+            JFrame jFrame;
+            jFrame = new JFrame();
+            String user = JOptionPane.showInputDialog(jFrame, "Enter Password: ");
+            if (user.equals("4321")){
+                displayEmployees.setGUI();
+            } else {
+                JOptionPane.showInputDialog(null,"You do not have access to this option", "Warning", JOptionPane.OK_OPTION);
+            }
             MenuFrame.dispose();
         }
         if(e.getActionCommand().equals("Exit")){
